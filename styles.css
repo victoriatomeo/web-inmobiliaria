@@ -1,0 +1,468 @@
+/* reseteo */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* menu */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    color: black;
+    text-align: right;
+    padding: 3px 3px;
+    width: 80px;
+    margin-left: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+/* body */
+body {
+    font-family: 'Lato', sans-serif;
+    color: #003787;
+    background-color: #E8E2E2;
+}
+
+/* tipo home */
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+article h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+/* colores  y alturas secciones */
+.seccion_1 {
+    background-color: #8AB74D;
+    height: 56rem;
+}
+
+.seccion_2 {
+    background-color: #ffffff;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seccion_2bis {
+    background-color: #ffffff;
+    height: 50rem;
+}
+
+.seccion_3 {
+    background-color: #8AB74D;
+    height: 37rem;
+}
+
+.seccion_4 {
+    background-color: #E8E2E2;
+    height: 47rem;
+}
+
+.seccion_5 {
+    background-color: #ffffff;
+    height: 47rem;
+}
+
+footer {
+    background-color: #1E1E1E;
+    color: #ffffff;
+}
+
+/* ubicacion de textos solos sin imagenes home */
+.txt_buscas {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.txt_diganos {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+/* ubicacion de  imagenes home */
+.img_llaves {
+    float: left;
+}
+
+.lupa_celu {
+    float: right;
+    margin-top: 2.5rem;
+}
+
+/* ubicacion de  imagenes comprar alquilar vender */
+.comprar_alquilar_vender {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.comprar_alquilar_vender article {
+    text-align: center;
+}
+
+/* Seccion_alquilar */
+
+/* Seccion_vender */
+.color_blanco {
+    background-color: #ffffff;
+}
+
+/* rapido_simple_transparente */
+.rapido_simple_transparente {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.separador {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.separador div:nth-child(odd) {
+    width: 5rem;
+    border-bottom: 2px solid #6d6d6d;
+}
+
+.separador div:nth-child(even) {
+    width: 5rem;
+    border-bottom: 4px solid #8AB74D;
+}
+
+.titulo_separador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt_lugar {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.txt_suscripcion {
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.txt_noticias {
+    text-align: center;
+}
+
+.txt_estamos {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.txt_visita {
+    text-align: left;
+    font-size: 3.125rem;
+}
+
+.mapa_txt {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.mapa_txt div {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.txt_independencia {
+    font-size: 25px
+}
+
+.txt_conversemos {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+/* pagina nosotros*/
+
+
+
+
+.txt_img_seguridad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./img/nosotros_img_superior.png");
+    height: 40rem;
+    background-size: cover;
+
+}
+
+.seccion_equipo {
+    background-color: #ffffff;
+    height: 12rem;
+}
+
+.color_ventajas {
+    background-color: #E8E2E2;
+    height: 20rem;
+}
+
+/* Grid */
+
+.grid_comprar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+}
+
+.grid_comprar img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* contacto*/
+.seccion_formularios {
+    background-color: #ffffff;
+    height: 70rem;
+
+}
+
+/*Footer*/
+/*rrss*/
+.info_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rrss {
+    display: flex;
+    flex-direction: column;
+}
+
+.rrss a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+/*media queris responsive*/
+
+
+
+/* mobile */
+@media (max-width: 480px) {
+
+    footer a span {
+        visibility: hidden;
+        font-size: 0;
+    }
+
+    /* Grid */
+
+    .grid_comprar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+
+    .grid_comprar img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    ul li {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        float: left;
+        margin-left: 2rem;
+    }
+
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    header a {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+    }
+    
+    header nav {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .info_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rrss {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+    footer a span {
+        visibility: hidden;
+        font-size: 0;
+    }
+
+    /* Grid */
+
+    .grid_comprar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+
+    .grid_comprar img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    ul li {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        float: left;
+        margin-left: 2rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    header a {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+    }
+    
+    header nav {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .info_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .rrss {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
