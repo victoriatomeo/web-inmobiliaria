@@ -226,7 +226,7 @@ footer {
     background-image: url("./img/nosotros_img_superior.png");
     height: 40rem;
     background-size: cover;
-
+    color: #fff;
 }
 
 .seccion_equipo {
@@ -352,18 +352,18 @@ footer {
         margin-left: 2rem;
     }
 
-
     header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
     header a {
         grid-column: 2;
         grid-row: 1;
         text-align: center;
     }
-    
+
     header nav {
         grid-column: 1;
         grid-row: 1;
@@ -441,12 +441,13 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
     header a {
         grid-column: 2;
         grid-row: 1;
         text-align: center;
     }
-    
+
     header nav {
         grid-column: 1;
         grid-row: 1;
@@ -465,4 +466,11 @@ footer {
 
 }
 
+/* se usaron algunas animated en titulos */
+
+/* transicion */
+/* Puse que cambie de color en alquilar */
+.grid_comprar img:hover {
+    filter: grayscale(80%);
+}
 
