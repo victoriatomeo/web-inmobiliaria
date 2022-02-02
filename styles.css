@@ -474,3 +474,7 @@ footer {
     filter: grayscale(80%);
 }
 
+/* En index se difuminan los 3 iconos comprar alquilar y vender */
+.comprar_alquilar_vender article a img:hover {
+    filter: blur(5px);
+}
