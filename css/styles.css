@@ -188,7 +188,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("./img/nosotros_img_superior.png");
+    background-image: url("../img/nosotros_img_superior.png");
     height: 40rem;
     background-size: cover;
     color: #fff;
