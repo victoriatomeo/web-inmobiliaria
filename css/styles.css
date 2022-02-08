@@ -4,41 +4,6 @@
     padding: 0;
 }
 
-/* menu */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-ul li {
-    color: black;
-    text-align: right;
-    padding: 3px 3px;
-    width: 80px;
-    margin-left: 10px;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-right: 1rem;
-}
-
-li {
-    list-style: none;
-}
-
-li a {
-    text-decoration: none;
-}
-
-li a:hover {
-    text-decoration: underline;
-}
-
 /* body */
 body {
     font-family: 'Lato', sans-serif;
