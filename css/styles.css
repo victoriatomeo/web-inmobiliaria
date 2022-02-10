@@ -180,7 +180,10 @@ footer {
 }
 
 /* pagina nosotros*/
-
+/* index espacio*/
+.espacio {
+    margin-top: 5rem;
+}
 
 
 
@@ -227,6 +230,25 @@ footer {
 
 }
 
+.img_contacto {
+max-width: 30rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* vender*/
+.img_vender {
+    max-width: 30rem;
+    }
+    
+
+
+
+
+    
+
 /*Footer*/
 /*rrss*/
 .info_footer {
@@ -259,6 +281,13 @@ footer {
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
+
+
+
+
+
+
+
 
 /*media queris responsive*/
 
@@ -345,6 +374,21 @@ footer {
         flex-direction: row;
     }
 
+    .img_contacto {
+        width: 0;
+        visibility: hidden;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_vender {
+        width: 0;
+        visibility: hidden;
+    }
+
 }
 
 
@@ -428,6 +472,7 @@ footer {
         display: flex;
         flex-direction: row;
     }
+
 
 }
 
