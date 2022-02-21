@@ -8,20 +8,35 @@
     align-items: $align-items;
 }
 
+// No se puede extender adentro de media queries
+// https://github.com/sass/sass/issues/1050
+// https://github.com/sass/sass/issues/456
+@mixin hidden() {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+%seccion {
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+}
+
+// GENERAL
+
 /* reseteo */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* body */
 body {
     font-family: $main-font;
     color: #003787;
     background-color: $main-gray;
 }
 
-/* tipo home */
 h1,
 h2 {
     font-family: $title-font;
@@ -33,169 +48,136 @@ article h3 {
     font-weight: 600;
 }
 
-/* colores  y alturas secciones */
-.seccion_1 {
+// SECCIONES
+
+// index
+.portada {
+    @extend %seccion;
     background-color: $main-green;
-    height: 56rem;
+    div {
+        @include flexbox(row, space-between, center);
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
-.seccion_2 {
+.hablemos {
+    @extend %seccion;
     background-color: white;
-    height: 30rem;
     @include flexbox(column, space-evenly, center);
 }
 
-.seccion_2bis {
+.elegi {
+    @extend %seccion;
     background-color: white;
-    height: 50rem;
 }
 
-.seccion_3 {
+.suscripcion {
+    @extend %seccion;
     background-color: $main-green;
     height: 37rem;
 }
 
-.seccion_4 {
+.ubicacion {
+    @extend %seccion;
     background-color: $main-gray;
 }
 
-.seccion_5 {
+.conversemos {
+    @extend %seccion;
+    text-align: left;
     background-color: white;
 }
 
-footer {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-/* ubicacion de textos solos sin imagenes home */
-.txt_buscas {
-    text-align: center;
-    padding-top: 5rem;
-}
-
-.txt_diganos {
-    text-align: center;
-    padding-top: 1rem;
-}
-
-/* ubicacion de  imagenes home */
-.img_llaves {
-    float: left;
-}
-
-.lupa_celu {
-    float: right;
-    margin-top: 2.5rem;
-}
-
-/* ubicacion de  imagenes comprar alquilar vender */
-.comprar_alquilar_vender {
-    @include flexbox(row, center, stretch);
-}
-
-.comprar_alquilar_vender article {
-    text-align: center;
-}
-
-/* Seccion_alquilar */
-
-/* Seccion_vender */
-.color_blanco {
-    background-color: white;
-}
-
-/* rapido_simple_transparente */
-.rapido_simple_transparente {
-    @include flexbox(row, center, stretch);
-}
-
-.separador {
-    @include flexbox(row, center, center);
-}
-
-.separador div:nth-child(odd) {
-    width: 5rem;
-    border-bottom: 2px solid $dark-gray;
-}
-
-.separador div:nth-child(even) {
-    width: 5rem;
-    border-bottom: 4px solid $main-green;
-}
-
-.titulo_separador {
-    @include flexbox(column, center, center);
-}
-
-.txt_lugar {
-    text-align: center;
-    padding-top: 5rem;
-}
-
-.txt_suscripcion {
-    text-align: center;
-    padding-top: 7rem;
-}
-
-.txt_noticias {
-    text-align: center;
-}
-
-.txt_estamos, .txt_conversemos {
-    text-align: center;
-    padding-top: 5rem;
-}
-
-.mapa_txt {
-    @include flexbox(row, flex-start, stretch);
-    margin-top: 3rem;
-
+// nosotros
+.seguridad {
+    @extend %seccion;
+    h1 {
+        text-align: left;
+        padding-left: 1rem;
+        font-size: 5rem;
+    }
     div {
-        margin-left: 3rem;
         @include flexbox(column, center, stretch);
+        background-image: url("../img/nosotros_img_superior.png");
+        height: 60rem;
+        background-size: cover;
+        color: white;
+    }
+}
+.equipo {
+    @extend %seccion;
+    background-color: white;
+}
+.ventajas {
+    @extend %seccion;
+    background-color: $main-gray;
+    div {
+        @include flexbox(row, center, stretch);
+    }
+}
 
-        .txt_visita {
-            text-align: left;
+// comprar/alquilar/vender
+.principal {
+    @extend %seccion;
+    background-color: white;
+}
+
+.separador_titulo {
+    @include flexbox(column, center, center);
+    h2 {
+        text-transform: uppercase;
+    }
+    div {
+        @include flexbox(row, center, center);
+        div:nth-child(odd) {
+            width: 5rem;
+            border-bottom: 2px solid $dark-gray;
+        }
+        div:nth-child(even) {
+            width: 5rem;
+            border-bottom: 4px solid $main-green;
+        }
+    }
+}
+
+.servicios {
+    @include flexbox(row, center, stretch);
+    article a img:hover {
+        filter: blur(5px);
+    }
+}
+
+.slider {
+    padding-top: 5rem;
+}
+
+.mapa {
+    @include flexbox(row, flex-start, stretch);
+    padding: 3rem 0 0 1rem;
+
+    text-align: left;
+    img {
+        max-width: 100%;
+        padding-right: 1rem;
+    }
+    div {
+        padding: 1rem 0 0 1rem;
+        h3 {
+            text-transform: uppercase;
             font-size: 3.125rem;
         }
-
-        .txt_independencia {
+        p {
             font-size: 1.5rem;
         }
     }
 }
 
-/* pagina nosotros*/
-/* index espacio*/
-.espacio {
-    margin-top: 5rem;
-}
-
-.txt_img_seguridad {
-    @include flexbox(column, center, stretch);
-    background-image: url("../img/nosotros_img_superior.png");
-    height: 40rem;
-    background-size: cover;
-    color: #fff;
-}
-
-.seccion_equipo {
-    background-color: white;
-    height: 12rem;
-}
-
-.color_ventajas {
-    background-color: $main-gray;
-    height: 20rem;
-}
-
-/* Grid */
-
-.grid_comprar {
+.grilla {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
     img {
@@ -203,154 +185,122 @@ footer {
         width: 100%;
         max-height: 100%;
     }
-}
-
-/* contacto*/
-.seccion_formularios {
-    background-color: white;
-    height: 70rem;
-}
-
-.img_contacto, .img_vender {
-    max-width: 30rem;
+    img:hover {
+        filter: grayscale(80%);
+    }
 }
 
 .formulario {
     @include flexbox(row-reverse, flex-start, stretch);
+    text-align: left;
+    img {
+        max-width: 30rem;
+    }
 }
 
-/* vender*/
-
-/*Footer*/
-/*rrss*/
-.info_footer {
-    @include flexbox(row, space-between, stretch);
+// PIE DE PAGINA
+footer {
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: white;
+    .info_footer {
+        @include flexbox(row, space-between, stretch);
+    }
 }
+
+$social-media: (
+    facebook: (
+        icon: url("../img/facebook.png"),
+        text: "/delsurgestioninmobiliaria",
+    ),
+    instagram: (
+        icon: url("../img/instagram.png"),
+        text: "@delsurgestioninmobiliaria",
+    ),
+    whatsapp: (
+        icon: url("../img/whatsapp.png"),
+        text: "+9411234758383",
+    ),
+);
 
 .rrss {
     @include flexbox(column, flex-start, stretch);
-    a {
-        @include flexbox(row, flex-start, center);
-    }
-}
+    ul {
+        list-style: none;
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
-}
+        span {
+            @include hidden();
+        }
 
-/* se usaron algunas animated en titulos */
-/* transicion */
-/* Puse que cambie de color en alquilar */
-.grid_comprar img:hover {
-    filter: grayscale(80%);
-}
-
-/* En index se difuminan los 3 iconos comprar alquilar y vender */
-.comprar_alquilar_vender article a img:hover {
-    filter: blur(5px);
-}
-
-
-/*media queris responsive*/
-
-/* mobile */
-@media (max-width: 480px) {
-    footer a span {
-        visibility: hidden;
-        font-size: 0;
-    }
-
-    /* Grid */
-    .grid_comprar {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 2rem;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
         a {
-            grid-column: 2;
-            grid-row: 1;
-            text-align: center;
+            @include flexbox(row, flex-start, center);
+            @each $social-key, $social-data in $social-media {
+                &[href*="#{$social-key}"] {
+                    &:before {
+                        content: map-get($social-data, icon);
+                    }
+                    &:after {
+                        content: map-get($social-data, text);
+                    }
+                }
+            }
         }
-        nav {
-            grid-column: 1;
-            grid-row: 1;
-        }
-    }
-    .info_footer {
-        @include flexbox(column, space-between, stretch);
-    }
-
-    .rrss {
-        @include flexbox(row, flex-start, stretch);
-    }
-
-    .img_contacto {
-        width: 0;
-        visibility: hidden;
-    }
-
-    .formulario {
-        @include flexbox(column, flex-start, stretch);
-    }
-
-    .mapa_txt {
-        @include flexbox(column, flex-start, stretch);
-    }
-
-    .img_vender {
-        width: 0;
-        visibility: hidden;
     }
 }
+
+// Media queries => responsive first
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
-    footer a span {
-        visibility: hidden;
-        font-size: 0;
+    .hidden {
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
     }
 
-    /* Grid */
-
-    .grid_comprar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 2rem;
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 
-    .grid_comprar img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 100%;
+    .mapa {
+        @include flexbox(column, flex-start, stretch);
+    }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    .portada {
+        div {
+            @include flexbox(column, space-between, center);
+        }
+    }
+
+    .servicios {
+        @include flexbox(column, center, stretch);
+    }
+
+    .ventajas {
+        div {
+            @include flexbox(column, center, stretch);
+        }
+    }
+
+    .seguridad {
+        div {
+            background-position: -20rem;
+        }
+    }
+
+    .grilla {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
     }
 
     header {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
         a {
-            grid-column: 2;
-            grid-row: 1;
             text-align: center;
-        }
-        nav {
-            grid-column: 1;
-            grid-row: 1;
         }
     }
 
@@ -358,8 +308,32 @@ footer {
         @include flexbox(column, space-between, stretch);
     }
 
+    .formulario {
+        @include flexbox(column, center, stretch);
+        img {
+            @include hidden();
+        }
+    }
+
+    .mapa {
+        @include flexbox(column, flex-start, stretch);
+    }
+
     .rrss {
-        @include flexbox(row, flex-start,  stretch);
+        ul {
+            li {
+                display: inline-block;
+            }
+
+            a {
+                @each $social, $social-data in $social-media {
+                    &[href*="#{$social}"] {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
-

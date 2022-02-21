@@ -1,15 +1,17 @@
+.portada, .hablemos, .elegi, .suscripcion, .ubicacion, .conversemos, .seguridad, .equipo, .ventajas, .principal {
+  padding: 5rem 0 5rem 0;
+  text-align: center; }
+
 /* reseteo */
 * {
   margin: 0;
   padding: 0; }
 
-/* body */
 body {
   font-family: "Lato", sans-serif;
   color: #003787;
   background-color: #e8e2e2; }
 
-/* tipo home */
 h1,
 h2 {
   font-family: "Raleway", sans-serif;
@@ -19,302 +21,241 @@ article h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 600; }
 
-/* colores  y alturas secciones */
-.seccion_1 {
-  background-color: #8ab74d;
-  height: 56rem; }
+.portada {
+  background-color: #8ab74d; }
+  .portada div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .portada div img {
+      max-width: 100%; }
 
-.seccion_2 {
+.hablemos {
   background-color: white;
-  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center; }
 
-.seccion_2bis {
-  background-color: white;
-  height: 50rem; }
+.elegi {
+  background-color: white; }
 
-.seccion_3 {
+.suscripcion {
   background-color: #8ab74d;
   height: 37rem; }
 
-.seccion_4 {
+.ubicacion {
   background-color: #e8e2e2; }
 
-.seccion_5 {
+.conversemos {
+  text-align: left;
   background-color: white; }
 
-footer {
-  background-color: #1e1e1e;
-  color: white; }
+.seguridad h1 {
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 5rem; }
 
-/* ubicacion de textos solos sin imagenes home */
-.txt_buscas {
-  text-align: center;
-  padding-top: 5rem; }
-
-.txt_diganos {
-  text-align: center;
-  padding-top: 1rem; }
-
-/* ubicacion de  imagenes home */
-.img_llaves {
-  float: left; }
-
-.lupa_celu {
-  float: right;
-  margin-top: 2.5rem; }
-
-/* ubicacion de  imagenes comprar alquilar vender */
-.comprar_alquilar_vender {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch; }
-
-.comprar_alquilar_vender article {
-  text-align: center; }
-
-/* Seccion_alquilar */
-/* Seccion_vender */
-.color_blanco {
-  background-color: white; }
-
-/* rapido_simple_transparente */
-.rapido_simple_transparente {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch; }
-
-.separador {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-
-.separador div:nth-child(odd) {
-  width: 5rem;
-  border-bottom: 2px solid #6d6d6d; }
-
-.separador div:nth-child(even) {
-  width: 5rem;
-  border-bottom: 4px solid #8ab74d; }
-
-.titulo_separador {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.txt_lugar {
-  text-align: center;
-  padding-top: 5rem; }
-
-.txt_suscripcion {
-  text-align: center;
-  padding-top: 7rem; }
-
-.txt_noticias {
-  text-align: center; }
-
-.txt_estamos, .txt_conversemos {
-  text-align: center;
-  padding-top: 5rem; }
-
-.mapa_txt {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  margin-top: 3rem; }
-  .mapa_txt div {
-    margin-left: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch; }
-    .mapa_txt div .txt_visita {
-      text-align: left;
-      font-size: 3.125rem; }
-    .mapa_txt div .txt_independencia {
-      font-size: 1.5rem; }
-
-/* pagina nosotros*/
-/* index espacio*/
-.espacio {
-  margin-top: 5rem; }
-
-.txt_img_seguridad {
+.seguridad div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   background-image: url("../img/nosotros_img_superior.png");
-  height: 40rem;
+  height: 60rem;
   background-size: cover;
-  color: #fff; }
+  color: white; }
 
-.seccion_equipo {
-  background-color: white;
-  height: 12rem; }
+.equipo {
+  background-color: white; }
 
-.color_ventajas {
-  background-color: #e8e2e2;
-  height: 20rem; }
+.ventajas {
+  background-color: #e8e2e2; }
+  .ventajas div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; }
 
-/* Grid */
-.grid_comprar {
+.principal {
+  background-color: white; }
+
+.separador_titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .separador_titulo h2 {
+    text-transform: uppercase; }
+  .separador_titulo div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .separador_titulo div div:nth-child(odd) {
+      width: 5rem;
+      border-bottom: 2px solid #6d6d6d; }
+    .separador_titulo div div:nth-child(even) {
+      width: 5rem;
+      border-bottom: 4px solid #8ab74d; }
+
+.servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; }
+  .servicios article a img:hover {
+    filter: blur(5px); }
+
+.slider {
+  padding-top: 5rem; }
+
+.mapa {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 3rem 0 0 1rem;
+  text-align: left; }
+  .mapa img {
+    max-width: 100%;
+    padding-right: 1rem; }
+  .mapa div {
+    padding: 1rem 0 0 1rem; }
+    .mapa div h3 {
+      text-transform: uppercase;
+      font-size: 3.125rem; }
+    .mapa div p {
+      font-size: 1.5rem; }
+
+.grilla {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 2rem; }
-  .grid_comprar img {
+  .grilla img {
     object-fit: cover;
     width: 100%;
     max-height: 100%; }
-
-/* contacto*/
-.seccion_formularios {
-  background-color: white;
-  height: 70rem; }
-
-.img_contacto, .img_vender {
-  max-width: 30rem; }
+  .grilla img:hover {
+    filter: grayscale(80%); }
 
 .formulario {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
-  align-items: stretch; }
+  align-items: stretch;
+  text-align: left; }
+  .formulario img {
+    max-width: 30rem; }
 
-/* vender*/
-/*Footer*/
-/*rrss*/
-.info_footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch; }
+footer {
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: white; }
+  footer .info_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; }
 
 .rrss {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch; }
-  .rrss a {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center; }
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #101010; }
-
-/* se usaron algunas animated en titulos */
-/* transicion */
-/* Puse que cambie de color en alquilar */
-.grid_comprar img:hover {
-  filter: grayscale(80%); }
-
-/* En index se difuminan los 3 iconos comprar alquilar y vender */
-.comprar_alquilar_vender article a img:hover {
-  filter: blur(5px); }
-
-/*media queris responsive*/
-/* mobile */
-@media (max-width: 480px) {
-  footer a span {
-    visibility: hidden;
-    font-size: 0; }
-  /* Grid */
-  .grid_comprar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem; }
-  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr; }
-    header a {
-      grid-column: 2;
-      grid-row: 1;
-      text-align: center; }
-    header nav {
-      grid-column: 1;
-      grid-row: 1; }
-  .info_footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch; }
-  .rrss {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch; }
-  .img_contacto {
-    width: 0;
-    visibility: hidden; }
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch; }
-  .mapa_txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch; }
-  .img_vender {
-    width: 0;
-    visibility: hidden; } }
+  .rrss ul {
+    list-style: none; }
+    .rrss ul span {
+      display: block;
+      width: 0;
+      height: 0;
+      overflow: hidden; }
+    .rrss ul a {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+      .rrss ul a[href*="facebook"]:before {
+        content: url("../img/facebook.png"); }
+      .rrss ul a[href*="facebook"]:after {
+        content: "/delsurgestioninmobiliaria"; }
+      .rrss ul a[href*="instagram"]:before {
+        content: url("../img/instagram.png"); }
+      .rrss ul a[href*="instagram"]:after {
+        content: "@delsurgestioninmobiliaria"; }
+      .rrss ul a[href*="whatsapp"]:before {
+        content: url("../img/whatsapp.png"); }
+      .rrss ul a[href*="whatsapp"]:after {
+        content: "+9411234758383"; }
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
-  footer a span {
-    visibility: hidden;
-    font-size: 0; }
-  /* Grid */
-  .grid_comprar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1rem;
-    grid-row-gap: 2rem; }
-  .grid_comprar img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%; }
-  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr; }
-    header a {
-      grid-column: 2;
-      grid-row: 1;
-      text-align: center; }
-    header nav {
-      grid-column: 1;
-      grid-row: 1; }
+  .hidden {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden; }
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr); }
+  .mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; } }
+
+/* mobile */
+@media (max-width: 480px) {
+  .portada div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+  .ventajas div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+  .seguridad div {
+    background-position: -20rem; }
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr); }
+  header a {
+    text-align: center; }
   .info_footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch; }
-  .rrss {
+  .formulario {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; }
+    .formulario img {
+      display: block;
+      width: 0;
+      height: 0;
+      overflow: hidden; }
+  .mapa {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch; } }
+    align-items: stretch; }
+  .rrss ul li {
+    display: inline-block; }
+  .rrss ul a[href*="facebook"]:after {
+    content: none; }
+  .rrss ul a[href*="instagram"]:after {
+    content: none; }
+  .rrss ul a[href*="whatsapp"]:after {
+    content: none; } }

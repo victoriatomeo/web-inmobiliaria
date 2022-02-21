@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Necesitas ayuda? Contactanos">
-    <meta name="keywords" content="contacto, ayuda, alquilar, vender, comprar, casas, departamentos, terrenos, hablemos">
+    <meta name="keywords"
+        content="contacto, ayuda, alquilar, vender, comprar, casas, departamentos, terrenos, hablemos">
     <title>Hablanos</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
@@ -47,12 +48,11 @@
     </header>
     <hr>
     <main>
-        <div class="seccion_formularios">
+        <section class="principal">
             <h1>Envíenos un mensaje</h1>
             <p> Completá el formulario para contactarnos sobre cualquier pregunta o comentario que tengas y nos
                 contactaremos a la brevedad.</p>
-
-            <section class="formulario">
+            <div class="formulario">
                 <img class="img_contacto" src="./img/contacto_img.png">
                 <div class="card w-75">
                     <div class="card-body">
@@ -101,8 +101,7 @@
                         </form>
                     </div>
                 </div>
-            </section>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="info_footer">
@@ -116,17 +115,27 @@
             </div>
             <div class="rrss">
                 <h4>Seguinos</h4>
-                <a href="https://www.facebook.com/Del-Sur-Gesti%C3%B3n-inmobiliaria-308449173173842"
-                    target="_blank"><img src="./img/facebook.png"
-                        alt="figura facebook"><span>/delsurgestioninmobiliaria</span></a>
-                <a href="https://www.instagram.com/delsurgestioninmobiliaria/" target="_blank"> <img
-                        src="./img/instagram.png" alt="figura instagram"><span>@delsurgestioninmobiliaria</span></a>
-                <a href="#"> <img src="./img/whatsapp.png" alt="figura whatsup"><span>+9411234758383</span></a>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/Del-Sur-Gesti%C3%B3n-inmobiliaria-308449173173842">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/delsurgestioninmobiliaria/">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=9411234758383&text=Hola!">
+                            <span>Whatsapp</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <p>&copy; 2021 All Rights Reserved &reg; Dani's Services & Co.</p>
+        <p>&copy; 2022 All Rights Reserved &reg; Dani's Services & Co.</p>
     </footer>
-    </section>
 </body>
 
 </html>
