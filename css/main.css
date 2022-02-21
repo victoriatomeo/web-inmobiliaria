@@ -25,7 +25,7 @@ article h3 {
   height: 56rem; }
 
 .seccion_2 {
-  background-color: #ffffff;
+  background-color: white;
   height: 30rem;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ article h3 {
   align-items: center; }
 
 .seccion_2bis {
-  background-color: #ffffff;
+  background-color: white;
   height: 50rem; }
 
 .seccion_3 {
@@ -44,11 +44,11 @@ article h3 {
   background-color: #e8e2e2; }
 
 .seccion_5 {
-  background-color: #ffffff; }
+  background-color: white; }
 
 footer {
   background-color: #1e1e1e;
-  color: #ffffff; }
+  color: white; }
 
 /* ubicacion de textos solos sin imagenes home */
 .txt_buscas {
@@ -71,7 +71,8 @@ footer {
 .comprar_alquilar_vender {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  align-items: stretch; }
 
 .comprar_alquilar_vender article {
   text-align: center; }
@@ -79,13 +80,14 @@ footer {
 /* Seccion_alquilar */
 /* Seccion_vender */
 .color_blanco {
-  background-color: #ffffff; }
+  background-color: white; }
 
 /* rapido_simple_transparente */
 .rapido_simple_transparente {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  align-items: stretch; }
 
 .separador {
   display: flex;
@@ -118,28 +120,27 @@ footer {
 .txt_noticias {
   text-align: center; }
 
-.txt_estamos {
+.txt_estamos, .txt_conversemos {
   text-align: center;
   padding-top: 5rem; }
 
 .mapa_txt {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   margin-top: 3rem; }
   .mapa_txt div {
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: stretch; }
     .mapa_txt div .txt_visita {
       text-align: left;
       font-size: 3.125rem; }
     .mapa_txt div .txt_independencia {
       font-size: 1.5rem; }
-
-.txt_conversemos {
-  text-align: center;
-  padding-top: 5rem; }
 
 /* pagina nosotros*/
 /* index espacio*/
@@ -150,13 +151,14 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
   background-image: url("../img/nosotros_img_superior.png");
   height: 40rem;
   background-size: cover;
   color: #fff; }
 
 .seccion_equipo {
-  background-color: #ffffff;
+  background-color: white;
   height: 12rem; }
 
 .color_ventajas {
@@ -177,37 +179,37 @@ footer {
 
 /* contacto*/
 .seccion_formularios {
-  background-color: #ffffff;
+  background-color: white;
   height: 70rem; }
 
-.img_contacto {
+.img_contacto, .img_vender {
   max-width: 30rem; }
 
 .formulario {
   display: flex;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: stretch; }
 
 /* vender*/
-.img_vender {
-  max-width: 30rem; }
-
 /*Footer*/
 /*rrss*/
 .info_footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: stretch; }
 
 .rrss {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; }
   .rrss a {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center; }
-
-.hamburger {
-  display: none; }
 
 .bar {
   display: block;
@@ -217,6 +219,16 @@ footer {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #101010; }
+
+/* se usaron algunas animated en titulos */
+/* transicion */
+/* Puse que cambie de color en alquilar */
+.grid_comprar img:hover {
+  filter: grayscale(80%); }
+
+/* En index se difuminan los 3 iconos comprar alquilar y vender */
+.comprar_alquilar_vender article a img:hover {
+  filter: blur(5px); }
 
 /*media queris responsive*/
 /* mobile */
@@ -231,10 +243,6 @@ footer {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 1rem;
     grid-row-gap: 2rem; }
-  .grid_comprar img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%; }
   header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -249,30 +257,26 @@ footer {
   .info_footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: stretch; }
   .rrss {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; }
   .img_contacto {
     width: 0;
     visibility: hidden; }
   .formulario {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; }
   .mapa_txt {
     display: flex;
     flex-direction: column;
-    margin-top: 3rem; }
-    .mapa_txt div {
-      margin-left: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .mapa_txt div .txt_visita {
-        text-align: left;
-        font-size: 3.125rem; }
-      .mapa_txt div .txt_independencia {
-        font-size: 1.5rem; }
+    justify-content: flex-start;
+    align-items: stretch; }
   .img_vender {
     width: 0;
     visibility: hidden; } }
@@ -307,17 +311,10 @@ footer {
   .info_footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: stretch; }
   .rrss {
     display: flex;
-    flex-direction: row; } }
-
-/* se usaron algunas animated en titulos */
-/* transicion */
-/* Puse que cambie de color en alquilar */
-.grid_comprar img:hover {
-  filter: grayscale(80%); }
-
-/* En index se difuminan los 3 iconos comprar alquilar y vender */
-.comprar_alquilar_vender article a img:hover {
-  filter: blur(5px); }
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; } }
